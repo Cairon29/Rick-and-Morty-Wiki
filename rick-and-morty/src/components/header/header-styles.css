@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.811);
+    color: white;
 }
 
 h1 {
@@ -45,7 +46,8 @@ h1 {
     text-align: center;
     transition: 
         background-color 0.5s ease-in-out,
-        scale 0.5s ease-in-out
+        scale 0.5s ease-in-out,
+        boder-color 0.5s ease-in-out;
     ;
     border-radius: 10px;
     cursor: pointer;
@@ -54,6 +56,7 @@ h1 {
 #header nav ul:hover {
     scale: 1.1;
     color: black;
-    background-color: #7af93fc6;
+    background-color: #04ADBF;
+    border: solid 1px #97f86a;
 }
 
