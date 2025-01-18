@@ -1,13 +1,22 @@
 export const HomeSection = () => {
   return (
     <main id="main">
-        <h2>
-          Rick and Morty based API wiki
-        </h2>
-        <p>
-            Explore detailed data on characters, episodes, and locations featured in the show up to Season 5.
-            This service is powered by the <a href="https://rickandmortyapi.com" target="_blank">Rick and Morty API</a>.
-        </p>
+        <section className="title-section">
+            <h2 className="first-title">
+            Look up for your favorite ADULT SWIM show!
+            </h2>
+        </section>
+        <section className="page-general-information-section">
+            <article>
+                <p>
+                    Explore detailed data on <b className="highlight-blue">characters</b>, <b className="highlight-green">episodes</b>, and <b className="highlight-yellow">locations</b> featured in the show up to Season 5.
+                    This service is powered by the <a className="link-anchore" href="https://rickandmortyapi.com" target="_blank">Rick and Morty API</a>.
+                </p>
+            </article>
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2019/10/09/07/28/development-4536630_1280.png" alt="ilustration" id="ilustration-image"/>
+            </article>
+        </section>
 
         <section>
             <h2>Features</h2>
