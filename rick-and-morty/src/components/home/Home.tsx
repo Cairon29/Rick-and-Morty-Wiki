@@ -1,3 +1,4 @@
+import { Footer } from "../footer/Footer"
 import { Header } from "../header/Header"
 import './home-styles.css'
 import { HomeSection } from "./HomeSection"
@@ -7,6 +8,7 @@ export const Home = () => {
     <>
         <Header/>
         <HomeSection/>
+        <Footer/>
     </>
   )
 }

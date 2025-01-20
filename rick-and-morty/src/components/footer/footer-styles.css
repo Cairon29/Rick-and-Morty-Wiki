@@ -1,0 +1,16 @@
+#footer {
+    grid-area: footer;
+    display: flex;
+    padding: 100px 0;
+    text-align: center;
+    justify-content: space-around;
+    background-color: #242424;
+    color: white;
+}
+
+.footer-contact-section {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: left;
+}

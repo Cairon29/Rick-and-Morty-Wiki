@@ -17,6 +17,17 @@ h1 {
     width: auto;
     display: flex;
     gap: 1em;
+
+    & .nav-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & svg {
+            height: 2em;
+            width: 2em;
+        }
+    }
 }
 
 #header div {
@@ -39,7 +50,7 @@ h1 {
 #header nav ul {
     font-size: 16px;
     font-weight: bold;
-    width: 100px;
+    width: 120px;
     margin: 0%;
     padding: 5px 0px;
     align-content: center;
@@ -48,7 +59,6 @@ h1 {
         background-color 0.5s ease-in-out,
         scale 0.5s ease-in-out,
         boder-color 0.5s ease-in-out;
-    ;
     border-radius: 10px;
     cursor: pointer;
 }

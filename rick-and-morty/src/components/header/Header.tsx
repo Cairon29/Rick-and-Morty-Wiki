@@ -1,3 +1,9 @@
+import { TiDocumentText } from "react-icons/ti";
+import { MdOutlineMyLocation } from "react-icons/md";
+import { IoPlaySkipForwardOutline } from "react-icons/io5";
+import { RiHome9Line } from "react-icons/ri";
+import { GrYoga } from "react-icons/gr";
+
 import './header-styles.css'
 
 export const Header = () => {
@@ -8,11 +14,11 @@ export const Header = () => {
         </div>
         <h1>The Rick and Morty Wiki</h1>
         <nav>
-            <ul> Home </ul>
-            <ul> Characters </ul>
-            <ul> Episodes </ul>
-            <ul> Locations</ul>
-            <ul> Docs </ul>
+            <ul className="nav-button"> <RiHome9Line/> Home </ul>
+            <ul className="nav-button"> <GrYoga/> Characters </ul>
+            <ul className="nav-button"> <IoPlaySkipForwardOutline/> Episodes </ul>
+            <ul className="nav-button"> <MdOutlineMyLocation/> Locations</ul>
+            <ul className="nav-button"> <TiDocumentText/> Docs </ul>
         </nav>
     </header>
   )

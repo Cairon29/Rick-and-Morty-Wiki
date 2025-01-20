@@ -46,10 +46,56 @@
     }
 }
 
-.link-anchore {
-    color: green;
+.highlight-blue {
+    color: rgb(52, 179, 247);
+}
+
+.highlight-green {
+    color: rgb(63, 208, 63);
 }
 
 #ilustration-image {
     width: 70vh;
+}
+
+.how-it-works-section {
+    display: block;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.811);
+    color: white;
+
+    & h2 {
+        font-weight: bold;
+        font-size: 28px;
+        margin: auto;
+        text-align: center;
+        padding: 2em 0;
+        color: #97f86a;
+    }
+
+    & p {
+        padding: 0 5em;
+        margin: auto;
+        font-size: 22px;
+        line-height: 2;
+    }
+
+}
+
+li {
+    display: flex;
+}
+
+.random-character-card {
+    width: auto;
+    display: flex;
+    gap: 3em;
+    & img {
+        border-radius: 20px;
+        height: 50%;
+    }
+
+    & p {
+        padding: 0px;
+    }
 }
