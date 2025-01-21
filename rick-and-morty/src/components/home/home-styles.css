@@ -61,7 +61,7 @@
 .how-it-works-section {
     display: block;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.811);
+    background-color: rgb(86, 86, 86);
     color: white;
 
     & h2 {
@@ -74,27 +74,58 @@
     }
 
     & p {
-        padding: 0 5em;
+        padding: 0 5em 5em;
         margin: auto;
         font-size: 22px;
         line-height: 2;
     }
 
+    & ul {
+        padding: 0%;
+        margin: 0;
+        background-color: rgb(48, 48, 48);
+    }
+
 }
 
-li {
+.listed-information-li {
     display: flex;
+    padding: 1em;
+    justify-content: space-around;
+
+    & p {
+        align-content: center;
+        width: 40%;
+        margin: 0;
+        padding: 2em;
+    }
 }
 
 .random-character-card {
-    width: auto;
+    width: 35%;
+    border-radius: 20px;
     display: flex;
-    gap: 3em;
-    & img {
-        border-radius: 20px;
-        height: 50%;
+    gap: 1em;
+    align-items: center;
+    background-color: rgb(52, 179, 247);
+
+
+    & h3 {
+        color: black;
     }
 
+    & img {
+        border-radius: 20px;
+        height: 250px;
+    }
+
+    & div {
+        padding: 0px 2em;
+    }
+
+    & div p{
+        width: auto;
+    }
     & p {
         padding: 0px;
     }

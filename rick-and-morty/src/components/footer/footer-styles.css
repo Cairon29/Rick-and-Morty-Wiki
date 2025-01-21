@@ -14,3 +14,11 @@
     flex-direction: column;
     text-align: left;
 }
+
+.references-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    text-align: start;
+}

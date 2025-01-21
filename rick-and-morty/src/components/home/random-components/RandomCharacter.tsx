@@ -35,10 +35,10 @@ export const RandomCharacter = () => {
                     <div>
                         <h3 className="character-name">{character.name}</h3>
                         <p className="character-appearances">
-                            Appeared in <span>{character.episode.length}</span> episodes
+                            <b>Appears:</b> <span>{character.episode.length}</span>
                         </p>
-                        <p> Gender: {character.gender}</p>
-                        <p> Status: {character.status}</p>
+                        <p> <b>Gender:</b> {character.gender}</p>
+                        <p> <b>Status:</b> {character.status}</p>
                     </div>
                 </>
             ) : (

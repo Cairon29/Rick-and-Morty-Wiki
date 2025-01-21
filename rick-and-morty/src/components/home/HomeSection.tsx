@@ -27,28 +27,27 @@ export const HomeSection = () => {
                     By fetching real-time data from the API, the app displays a comprehensive collection of characters, locations, and episodes from the Rick and Morty universe. Users can seamlessly navigate through the content with features like advanced search, filters for specific criteria such as character status and gender, and a clean, user-friendly interface.
                 </p>
                 <ul>
-                    <li>
+                    <li className="listed-information-li">
                         <p>
                             Search for characters by their name or filter them by their status (e.g., Alive, Dead, or Unknown) and gender.
                         </p>
                         <RandomCharacter/>
                     </li>
-                    <li>
+                    <li className="listed-information-li">
                         <p>
                             Explore episodes to find summaries, air dates, and character appearances.
                         </p>
                         <RandomCharacter/>
                     </li>
-                    <li>Examine different locations, such as planets, dimensions, and other iconic settings from the show.</li>
                 </ul>
             </section>
 
-            <section>
+            {/* <section>
                 <h2>Start Exploring</h2>
                 <p>
                     Use the navigation menu to jump into your favorite section and start exploring the Rick and Morty universe!
                 </p>
-            </section>
+            </section> */}
         </main>
     )
 }
