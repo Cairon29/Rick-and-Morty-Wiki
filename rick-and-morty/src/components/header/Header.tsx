@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { TiDocumentText } from "react-icons/ti";
 import { MdOutlineMyLocation } from "react-icons/md";
 import { IoPlaySkipForwardOutline } from "react-icons/io5";
@@ -14,11 +15,21 @@ export const Header = () => {
         </div>
         <h1>The Rick and Morty Wiki</h1>
         <nav>
-            <ul className="nav-button"> <RiHome9Line/> Home </ul>
-            <ul className="nav-button"> <GrYoga/> Characters </ul>
-            <ul className="nav-button"> <IoPlaySkipForwardOutline/> Episodes </ul>
-            <ul className="nav-button"> <MdOutlineMyLocation/> Locations</ul>
-            <ul className="nav-button"> <TiDocumentText/> Docs </ul>
+            <Link to="/home">
+              <ul className="nav-button"> <RiHome9Line/> Home </ul>
+            </Link>
+            <Link to="/characters">
+              <ul className="nav-button"> <GrYoga/> Characters </ul>          
+            </Link>
+            <Link to="/home">
+              <ul className="nav-button"> <IoPlaySkipForwardOutline/> Episodes </ul>
+            </Link>
+            <Link to="/home">
+              <ul className="nav-button"> <MdOutlineMyLocation/> Locations</ul>            
+            </Link>
+            <Link to="/home">
+              <ul className="nav-button"> <TiDocumentText/> Docs </ul>            
+            </Link>
         </nav>
     </header>
   )
