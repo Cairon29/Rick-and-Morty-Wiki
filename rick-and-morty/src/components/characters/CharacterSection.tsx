@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { SingleCharacter } from "./SingleCharacter";
+import { CharacterFilterContext } from "../../contexts/CharacterFilterContext";
 
 interface SingleCharacter {
     id: number;
@@ -11,25 +12,34 @@ interface SingleCharacter {
 }
 
 export const CharacterSection = () => {
+    const { filterUrl, filter, setFilter } = useContext(CharacterFilterContext);
     const [characters, setCharacters] = useState<SingleCharacter[]>([]);
-    const [page, setPage] = useState(1);
 
-    const hdlNextPage = () => {
-        page <= 42 ? setPage(page + 1) : page;
-    }
-
-    const hdlPrevPage = () => {
-        page >= 2 ? setPage(page - 1) : page;
-    }
     useEffect(() => {
-        fetch(`https://rickandmortyapi.com/api/character/?page=${page}`)
+        fetch(filterUrl)
             .then(response => response.json())
             .then(data => { 
-                setCharacters(data.results); 
-                console.log(data.results);
+                if (data.results.length > 0 ) {
+                    setCharacters(data.results)
+                } else {
+                    setFilter((prev) => ({...prev, page: prev.page}))
+                }
             })
             .catch(error => console.error("Error fetching data:", error));
-    }, [page]);
+    }, [filter]);
+
+    const hdlNextPage = () =>{
+        if (filter.page <= 42) {
+            setFilter((prev) => ({...prev, page: prev.page + 1}))
+            document.documentElement.scrollTop = 0        
+        }
+    }
+    const hdlPrevPage = () => {
+        if (filter.page > 1) {
+            setFilter((prev) => ({ ...prev, page: prev.page - 1 }))
+            document.documentElement.scrollTop = 0
+        }    
+    };
 
     return (
         <main id="main-character">

@@ -15,7 +15,8 @@ body {
   display: grid;
   grid-template-areas: 
       "header header "
-      "sidebar main"
+      "sidebar sidebar"
+      "main main"
       "footer footer"
   ;
   grid-template-columns: auto 1fr;
