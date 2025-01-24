@@ -21,15 +21,15 @@ export const Header = () => {
             <Link to="/characters">
               <ul className="nav-button"> <GrYoga/> Characters </ul>          
             </Link>
-            <Link to="/home">
+            <Link to="/episodes">
               <ul className="nav-button"> <IoPlaySkipForwardOutline/> Episodes </ul>
             </Link>
-            <Link to="/home">
+            <Link to="/locations">
               <ul className="nav-button"> <MdOutlineMyLocation/> Locations</ul>            
             </Link>
-            <Link to="/home">
+            <a href="https://rickandmortyapi.com/documentation" target="_blank">
               <ul className="nav-button"> <TiDocumentText/> Docs </ul>            
-            </Link>
+            </a>
         </nav>
     </header>
   )
