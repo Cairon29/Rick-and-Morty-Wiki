@@ -17,7 +17,7 @@ export const CharacterFilter = () => {
     setFilter((prev) => ({ ...prev, name: e.target.value }));
   }
   return (
-    <aside id="sideBar">
+    <aside id="sideBar-characters">
       <section>
         <input type="text" placeholder="e.j. Morty Smith" value={filter.name} onChange={hdlName} />
         <button>
