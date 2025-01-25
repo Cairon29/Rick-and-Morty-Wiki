@@ -1,3 +1,160 @@
-#main {
+#main-episode {
+    width: 100%;
     grid-area: main;
+    background-color: #272b33;
+
+    & ul {
+
+        list-style: none;
+        padding: 40px 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fill,
+            minmax(600px, .7fr)
+        );
+        gap: 2em;
+        justify-content: center;
+    }
+}
+
+.single-episode {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #3c3e44;
+    border-radius: 16px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 5px 10px black;
+    padding: 1.5em;
+
+    & h3 {
+        margin: 0px;
+        font-size: 1.8em;
+        color: #8bd3fa;
+        text-align: center;
+    }
+
+    & div {
+        margin-top: 10px;
+        padding: 1em;
+        border-top: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    & p {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    & b {
+        color: #34b3f7;
+    }
+
+    & .single-episode .episode-details {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    gap: 2em;
+    & button {
+        font-size: 18px;
+        font-weight: bold;
+        width: 150px;
+        padding: 1em;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        transition:  .2s ease-in-out;
+    }
+
+    & button:hover {
+        color: white;
+        background-color: #335e26;
+        scale: 1.1;
+    }
+}
+
+#sideBar-episodes {
+    grid-area: sidebar;
+    padding: 3em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    background-image: url('https://www.hdwallpapers.in/download/tv_show_rick_and_morty_morty_smith_rick_sanchez_half_faces_4k_hd_movies-HD.jpg');
+    background-position: center;
+    background-size: cover;
+
+    & :before {
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
+        z-index: 1;
+    } 
+
+    & input {
+        padding: 10px;
+        border-radius: 10px;
+        width: 50vh;
+        height: 40px;
+        margin: auto;
+
+        color: white;
+        font-size: large;
+        font-weight: bold;
+        background-color: #272b33;
+        border: #9cee69 solid 2px;
+
+        & :focus {
+            border: #9cee69 solid 2px;
+        }
+    }
+
+    & button {
+        margin: auto;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 40px;
+        height: 60px;
+    }
+
+    & section {
+        display: flex;
+        align-content: center;
+        gap: 1em;
+    }
+
+    & div {
+        display: flex;
+        align-items: center;
+        padding: 1em
+    }
+    & label {
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+    }
+
+    & select {
+        width: 120px;
+        background-color: #272b33;
+        color: white;
+        border-radius: 10px;
+        padding: 1em;
+        font-weight: bold;
+        border: #9cee69 solid 2px;
+    }
 }

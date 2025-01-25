@@ -3,7 +3,7 @@ import { RandomCharacter } from "./random-components/RandomCharacter"
 export const HomeSection = () => {
 
     return (
-        <main id="main">
+        <main id="main-home">
             <section className="title-section">
                 <h2 className="first-title">
                 Look up for your favorite <b className="highlight-blue">ADULT SWIM</b> show!

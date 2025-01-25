@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
+import { SingleEpisode } from './SingleEpisode';
 
 export const EpisodeSection = () => {
 
     interface Episode {
         id: number;
         name: string;
-        airDate: string;
+        air_date: string;
         episode: string;
         characteres: string[];
         url: string;
@@ -30,13 +31,12 @@ export const EpisodeSection = () => {
         setPage(page - 1)
     }
     return (
-        <main id='main'>
-            Here the Episodes
+        <main id='main-episode'>
             <ul>
                 {   
                     episodes.length > 0 
                         ? episodes.map((episode) => (
-                            <li key={episode.id}>{episode.name}</li>
+                            <SingleEpisode key={episode.id} episode={episode} />
                         ))
                         : <p>
                             Loading ...
@@ -44,7 +44,7 @@ export const EpisodeSection = () => {
                 }
             </ul>
 
-            <section>
+            <section id='pagination'>
                 <button onClick={hdlPrevPage}>Previous</button>
                 <button onClick={hdlNextPage}>Next</button>
             </section>
