@@ -1,4 +1,4 @@
-import { RandomCharacter } from "./random-components/RandomCharacter"
+import { RandomCharacter } from "../stateful/RandomCharacter"
 
 export const HomeSection = () => {
 
@@ -41,13 +41,6 @@ export const HomeSection = () => {
                     </li>
                 </ul>
             </section>
-
-            {/* <section>
-                <h2>Start Exploring</h2>
-                <p>
-                    Use the navigation menu to jump into your favorite section and start exploring the Rick and Morty universe!
-                </p>
-            </section> */}
         </main>
     )
 }
