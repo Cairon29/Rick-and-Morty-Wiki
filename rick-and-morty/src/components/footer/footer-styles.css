@@ -1,7 +1,8 @@
 #footer {
     grid-area: footer;
     display: flex;
-    padding: 100px 0;
+    flex-wrap: wrap;
+    padding: 100px 20px;
     text-align: center;
     justify-content: space-around;
     background-color: #202329;
@@ -9,6 +10,7 @@
 }
 
 .footer-contact-section {
+    width: 40%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -16,9 +18,20 @@
 }
 
 .references-section {
+    width: 40%;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: left;
     text-align: start;
+}
+
+@media screen and (max-width: 728px) {
+    .footer-contact-section {
+        width: 350px;
+    }
+    .references-section {
+        width: 350px;
+    }
 }
