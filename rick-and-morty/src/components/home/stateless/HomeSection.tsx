@@ -1,4 +1,4 @@
-import { RandomCharacter } from "./random-components/RandomCharacter"
+import { RandomCharacter } from "../stateful/RandomCharacter"
 
 export const HomeSection = () => {
 
@@ -28,26 +28,23 @@ export const HomeSection = () => {
                 </p>
                 <ul>
                     <li className="listed-information-li">
-                        <p>
-                            Search for characters by their name or filter them by their status (e.g., Alive, Dead, or Unknown) and gender.
-                        </p>
+                        <div>
+                            <p>
+                                Search for characters by their name or filter them by their status (e.g., Alive, Dead, or Unknown) and gender.
+                            </p>
+                        </div>
                         <RandomCharacter/>
                     </li>
                     <li className="listed-information-li">
-                        <p>
-                            Explore episodes to find summaries, air dates, and character appearances.
-                        </p>
+                        <div>
+                            <p>
+                                Explore episodes to find summaries, air dates, and character appearances.
+                            </p>
+                        </div>
                         <RandomCharacter/>
                     </li>
                 </ul>
             </section>
-
-            {/* <section>
-                <h2>Start Exploring</h2>
-                <p>
-                    Use the navigation menu to jump into your favorite section and start exploring the Rick and Morty universe!
-                </p>
-            </section> */}
         </main>
     )
 }

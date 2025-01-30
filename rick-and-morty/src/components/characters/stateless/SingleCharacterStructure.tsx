@@ -1,22 +1,16 @@
-interface SingleCharacter {
-    name: string;
-    image: string;
-    gender: string;
-    status: string;
-    episode: string[];
-}
+import { Character } from "../../../types/Character";
 
 interface SingleCharacterProps {
-    character?: SingleCharacter;
+    character?: Character;
 }
 
-export const SingleCharacter = ({ character }: SingleCharacterProps) => {
+export const SingleCharacterStructure = ({ character }: SingleCharacterProps) => {
   if (!character) {
     return <p>Loading...</p>;
   }
 
   return (
-    <article className="single-character">
+    <li className="single-character">
       <img 
         src={character.image} 
         alt={character.name} 
@@ -31,6 +25,6 @@ export const SingleCharacter = ({ character }: SingleCharacterProps) => {
           <p><b>Status:</b> <span>{character.status}</span></p>
         </section>
       </div>
-    </article>
+    </li>
   );
 };

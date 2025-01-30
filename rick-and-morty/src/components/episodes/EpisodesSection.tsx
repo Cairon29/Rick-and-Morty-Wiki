@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { SingleEpisode } from './SingleEpisode';
+import { EpisodeFilterContext } from '../../contexts/EpisodeFiltterContext';
 
 export const EpisodeSection = () => {
 
@@ -15,14 +16,37 @@ export const EpisodeSection = () => {
 
     const [episodes, setEpisodes] = useState<Episode[]>([])
     const [page, setPage] = useState(1)
+    const { filter } = useContext(EpisodeFilterContext)
 
-    const url = `https://rickandmortyapi.com/api/episode?page=${page}`
-
+    const baseUrl = `https://rickandmortyapi.com/api/episode?page=${page}`
+    const filterUrl = `https://rickandmortyapi.com/api/episode?name=${filter.episode}`
     useEffect(() => {
-        fetch(url)
-        .then(response => response.json())
-        .then(data => setEpisodes(data.results))
-    }, [page])
+        console.log(filter)
+        if (!filter.episode && !filter.release_year && !filter.season) {
+            fetch(baseUrl)
+                .then(response => response.json())
+                .then(data => setEpisodes(data.results))
+        } else if (filter.episode && !filter.release_year && !filter.season) {
+            fetch(filterUrl)
+                .then(response => response.json())
+                .then(data => setEpisodes(data.results))
+        } else {
+            fetch(baseUrl)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data.results)
+                    const filteredEpisodes = data.results.filter((rawEpisode: Episode) => {
+                        if (rawEpisode.name.includes(filter.episode) 
+                            && rawEpisode.air_date.includes(filter.release_year) 
+                            && rawEpisode.episode.includes(filter.season)) {
+                            return rawEpisode
+                        }
+                })
+                    console.log(filteredEpisodes)
+                    setEpisodes(filteredEpisodes)
+                })
+        }
+    }, [page, filter])
 
     const hdlNextPage = () => {
         setPage(page + 1)

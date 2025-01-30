@@ -1,16 +1,25 @@
 #main-character {
     width: 100%;
     grid-area: main;
-    display: grid;
-    grid-template-columns: repeat(
-        auto-fill,
-        minmax(600px, .7fr)
-    );
-    justify-content: center;
-    background-color: #272b33;
+    
+    & ul {
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 2em;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(600px, .6fr)
+        );
+        justify-content: center;
+        background-color: #272b33;
+    }
+    
 }
 .single-character {
-    width: 90%;
+    width: 100%;
     height: 80%;
     margin: auto;
     display: flex;
@@ -63,66 +72,82 @@
         transition:  .2s ease-in-out;
     }
 
-    & button:hover {
+    & .enabledButton:hover {
         color: white;
         background-color: #335e26;
         scale: 1.1;
+    }
+
+    & .disabledButton {
+        background-color: #5e2626;
+        color: #f1a3a3;
+        cursor: not-allowed;
+    }
+    & .disabledButton:hover {
+        color: white;
+        background-color: #381616;
     }
 }
 
 #sideBar-characters {
     grid-area: sidebar;
-    padding: 3em;
+    padding: 4em 0px;
     display: flex;
     justify-content: center;
-    gap: 1em;
     background-image: url('https://pixelz.cc/wp-content/uploads/2018/08/rick-and-morty-characters-uhd-4k-wallpaper.jpg');
     background-position: center;
     background-size: cover;
+}
 
-    & :before {
-        background: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(5px);
-        z-index: 1;
-    } 
+#form-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    gap: 1em;
+    
+}
+
+#filter-name {
+    display: flex;
+    align-items: center;
+    gap: 1em;
 
     & input {
-        padding: 10px;
+        width: 350px;
+        height: min-content;
+        padding: 15px;
         border-radius: 10px;
-        width: 50vh;
-        height: 40px;
-        margin: auto;
-
-        color: white;
-        font-size: large;
-        font-weight: bold;
-        background-color: #272b33;
+        background-color: #030c20d3;
         border: #9cee69 solid 2px;
-
+        cursor: text;
+        color: white;
+        font-size: medium;
+        font-weight: bold;
         & :focus {
             border: #9cee69 solid 2px;
-        }
+        }        
     }
-
     & button {
         margin: auto;
-        padding: 10px;
+        padding: 15px;
         border-radius: 10px;
+        border-style: solid #999;
         cursor: pointer;
-        width: 40px;
-        height: 60px;
+        height: auto;
     }
+}
 
-    & section {
-        display: flex;
-        align-content: center;
-        gap: 1em;
-    }
-
+#filter-categories {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     & div {
         display: flex;
         align-items: center;
-        padding: 1em
+        padding: 1em;
     }
     & label {
         font-size: 22px;
@@ -132,12 +157,20 @@
     }
 
     & select {
-        width: 120px;
-        background-color: #272b33;
+        background-color: #030c20d3;
         color: white;
         border-radius: 10px;
         padding: 1em;
         font-weight: bold;
         border: #9cee69 solid 2px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #filter-name {
+        & input {
+            width: 100%;
+        }
     }
 }
