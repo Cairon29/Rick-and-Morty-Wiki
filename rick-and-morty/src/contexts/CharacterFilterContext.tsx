@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { Gender, Status } from "../types/CharacterFilters";
 
 interface Props {
     children: React.ReactNode;
@@ -7,9 +8,10 @@ interface Props {
 interface Filters {
     page: number;
     name: string;
-    status:'all' | 'alive' | 'dead' | 'unknown';
+    status: Status;
     species: string;
-    gender: 'all' | 'male' | 'female' | 'unknown';
+    gender: Gender;
+    totalPages: number;
 }
 
 interface CharacterFilterContextType {
@@ -25,6 +27,7 @@ export const CharacterFilterContext = createContext<CharacterFilterContextType>(
         status: 'all',
         species: '',
         gender: 'all',
+        totalPages: 0
     },
     setFilter: () => {},
     filterUrl: '',
@@ -37,6 +40,7 @@ export const CharacterFilterProvider = ({ children }: Props) => {
         status: 'all',
         species: '',
         gender: 'all',
+        totalPages: 0
     });
      
     const filterUrl = `https://rickandmortyapi.com/api/character/?page=${filter.page}&name=${filter.name}&status=${filter.status === 'all' ? '' : filter.status}&species=${filter.species}&gender=${filter.gender === 'all' ? '' : filter.gender}`;

@@ -10,7 +10,7 @@ export const SingleCharacterStructure = ({ character }: SingleCharacterProps) =>
   }
 
   return (
-    <article className="single-character">
+    <li className="single-character">
       <img 
         src={character.image} 
         alt={character.name} 
@@ -25,6 +25,6 @@ export const SingleCharacterStructure = ({ character }: SingleCharacterProps) =>
           <p><b>Status:</b> <span>{character.status}</span></p>
         </section>
       </div>
-    </article>
+    </li>
   );
 };

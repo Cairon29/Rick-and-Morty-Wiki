@@ -14,8 +14,9 @@ export const CharacterSection = () => {
             .then(data => { 
                 if (data.results.length > 0 ) {
                     setCharacters(data.results)
+                    setFilter((prev) => ({ ...prev, totalPages: data.info.pages }))
                 } else {
-                    setFilter((prev) => ({...prev, page: prev.page}))
+                    setFilter((prev) => ({...prev, page: prev.page - 1}))
                 }
             })
             .catch(error => console.error("Error fetching data:", error));
@@ -38,14 +39,16 @@ export const CharacterSection = () => {
 
     return (
         <main id="main-character">
-            {characters.length > 0 ? (
-                characters.map((character) => (
-                    <SingleCharacterStructure key={character.id} character={character} />
-                ))
-            ) : (
-                <p>Loading...</p>
-            )}
-            <PaginationStructure HdlFunctions={hdlFunctions}/>
+            <ul>
+                {characters.length > 0 ? (
+                    characters.map((character) => (
+                        <SingleCharacterStructure key={character.id} character={character} />
+                    ))
+                ) : (
+                    <p>Loading...</p>
+                )}
+                <PaginationStructure HdlFunctions={hdlFunctions}/>
+            </ul>
         </main>
     );
 };
