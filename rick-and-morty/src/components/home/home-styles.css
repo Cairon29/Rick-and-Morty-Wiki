@@ -36,7 +36,8 @@
 
 .page-general-information-section {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 
     & :first-child {
@@ -44,6 +45,15 @@
         font-size: 28px;
         line-height: 2;
     }
+
+    & p {
+        word-wrap: break-word;
+    }
+
+    & :last-child {
+        padding: 1em;
+    }
+   
 }
 
 .highlight-blue {
@@ -74,35 +84,46 @@
     }
 
     & p {
-        padding: 0 5em 5em;
         margin: auto;
+        width: 75%;
+        padding-bottom: 3em;
         font-size: 22px;
         line-height: 2;
     }
 
     & ul {
         padding: 0%;
-        margin: 0;
+        margin: auto;
         background-color: rgb(48, 48, 48);
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
     }
 
 }
 
 .listed-information-li {
+    list-style: none;
     display: flex;
-    padding: 1em;
-    justify-content: space-around;
-
-    & p {
+    flex-wrap: wrap-reverse;
+    padding: 1em 0px;
+    gap: 1em;
+    justify-content: center;
+    
+    & div {
+        width: 30%;
         align-content: center;
-        width: 40%;
-        margin: 0;
-        padding: 2em;
+    }
+    & p {
+        margin: auto;
+        align-content: center;
+        width: 90%;
+        padding: 16px;
     }
 }
 
 .random-character-card {
-    width: 35%;
+    width: auto;
     border-radius: 20px;
     display: flex;
     gap: 1em;
@@ -116,7 +137,8 @@
 
     & img {
         border-radius: 20px;
-        height: 250px;
+        width: 100%;
+        height: auto;
     }
 
     & div {
@@ -129,4 +151,52 @@
     & p {
         padding: 0px;
     }
+}
+
+@media screen and (max-width: 540px) {
+    .page-general-information-section {
+        & :first-child {
+            width: 90%;
+            font-size: 22px;
+            line-height: 2;
+        }
+    
+        & p {
+            word-wrap: break-word;
+            padding: 10px;
+
+        }
+        & :nth-child(2) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & img {
+                width: 80%;
+            }
+        }
+    }
+
+    #ilustration-image {
+        width: 80%;
+        margin: auto;
+    }
+    
+    .random-character-card {
+        flex-direction: column;
+        padding: 10px;
+
+        & div {
+            padding: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .listed-information-li {
+        & div {
+            width: 100%;
+            align-content: center;
+        }
+    }
+
 }
