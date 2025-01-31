@@ -87,78 +87,12 @@
     }
 }
 
-#sideBar-episodes {
-    grid-area: sidebar;
-    padding: 3em;
-    
-    background-image: url('https://www.hdwallpapers.in/download/tv_show_rick_and_morty_morty_smith_rick_sanchez_half_faces_4k_hd_movies-HD.jpg');
-    background-position: center;
-    background-size: cover;
-
-    & form {
-        display: flex;
-        justify-content: center;
-        gap: 1em;    
+@media screen and (max-width: 670px) {
+    #main-episode ul {
+        grid-template-columns: 1fr;
     }
 
-    & :before {
-        background: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(5px);
-        z-index: 1;
-    } 
-
-    & input {
-        padding: 10px;
-        border-radius: 10px;
-        width: 50vh;
-        height: 40px;
-        margin: auto;
-
-        color: white;
-        font-size: large;
-        font-weight: bold;
-        background-color: #272b33;
-        border: #9cee69 solid 2px;
-
-        & :focus {
-            border: #9cee69 solid 2px;
-        }
-    }
-
-    & button {
-        margin: auto;
-        padding: 10px;
-        border-radius: 10px;
-        cursor: pointer;
-        width: 40px;
-        height: 60px;
-    }
-
-    & section {
-        display: flex;
-        align-content: center;
-        gap: 1em;
-    }
-
-    & div {
-        display: flex;
-        align-items: center;
-        padding: 1em
-    }
-    & label {
-        font-size: 22px;
-        font-weight: bold;
-        text-align: center;
-        color: white;
-    }
-
-    & select {
-        width: 120px;
-        background-color: #272b33;
-        color: white;
-        border-radius: 10px;
-        padding: 1em;
-        font-weight: bold;
-        border: #9cee69 solid 2px;
+    .single-episode {
+        padding: 5px;
     }
 }
