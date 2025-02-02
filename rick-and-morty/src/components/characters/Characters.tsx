@@ -2,8 +2,9 @@ import { Footer } from "../footer/Footer"
 import { Header } from "../header/Header"
 import { Filter } from "./stateful/Filter"
 import { CharacterSection } from "./stateful/CharacterSection"
-import './character-styles.css'
-import './filter-styles.css'
+import './styles/character-styles.css'
+import './styles/filter-styles.css'
+
 export const Characters = () => {
   return (
     <>

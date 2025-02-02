@@ -1,5 +1,5 @@
 import { IoSearch } from "react-icons/io5";
-import { Gender, Status } from "../../../types/CharacterFilters";
+import { Gender, Status } from "../../../types/SelectorFilters";
 
 interface HdlFunctions {
   hdlName: (event: React.ChangeEvent<HTMLInputElement>) => void;
