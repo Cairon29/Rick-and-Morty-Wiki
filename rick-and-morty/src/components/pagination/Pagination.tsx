@@ -1,5 +1,4 @@
-import { useContext } from "react";
-import { CharacterFilterContext } from "../../../contexts/CharacterFilterContext";
+import { PageFilter } from "../../types/PageFilters";
 
 interface HdlFunctions {
     hdlPrevPage: ( event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -8,14 +7,13 @@ interface HdlFunctions {
 
 interface HdlProps {
     HdlFunctions: HdlFunctions;
+    PageFilter: PageFilter;
 }
 
-export const PaginationStructure = ( { HdlFunctions }: HdlProps ) => {
+export const Pagination = ( { HdlFunctions, PageFilter }: HdlProps ) => {
 
-    const { filter } = useContext(CharacterFilterContext)
-
-    const isPrevDisabled = filter.page === 1;
-    const isNextDisabled = filter.page >= filter.totalPages;
+    const isPrevDisabled = PageFilter.page === 1;
+    const isNextDisabled = PageFilter.page >= PageFilter.totalPages;
 
     return (
         <section className="pagination-section">
@@ -26,7 +24,7 @@ export const PaginationStructure = ( { HdlFunctions }: HdlProps ) => {
                 >
                     Prev Page
             </button>
-            <h3 style={{ color: "white"}}> Page {filter.page}</h3>
+            <h3 style={{ color: "white"}}> Page {PageFilter.page}</h3>
             <button 
                 onClick={HdlFunctions.hdlNextPage}
                 disabled={isNextDisabled}

@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { CharacterFilterContext } from "../../../contexts/CharacterFilterContext";
 import { FilterStructure } from "../stateless/FilterStructure";
-import { Gender, Status } from "../../../types/CharacterFilters";
+import { Gender, Status } from "../../../types/SelectorFilters";
 
 
 export const Filter = () => {

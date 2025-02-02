@@ -57,39 +57,6 @@
 
 }
 
-.pagination-section {
-    display: flex;
-    justify-content: center;
-    padding: 2em;
-    gap: 2em;
-    grid-column:  1 / -1;
-    & button {
-        font-size: 18px;
-        font-weight: bold;
-        padding: 1em;
-        border-radius: 10px;
-        border: none;
-        cursor: pointer;
-        transition:  .2s ease-in-out;
-    }
-
-    & .enabledButton:hover {
-        color: white;
-        background-color: #335e26;
-        scale: 1.1;
-    }
-
-    & .disabledButton {
-        background-color: #5e2626;
-        color: #f1a3a3;
-        cursor: not-allowed;
-    }
-    & .disabledButton:hover {
-        color: white;
-        background-color: #381616;
-    }
-}
-
 @media screen and (max-width: 600px) {
     #main-character ul {
         grid-template-columns: 300px;

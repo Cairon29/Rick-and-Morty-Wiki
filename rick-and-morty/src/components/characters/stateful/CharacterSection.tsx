@@ -1,8 +1,9 @@
 import { useState, useEffect, useContext } from "react";
 import { Character } from "../../../types/Character";
 import { CharacterFilterContext } from "../../../contexts/CharacterFilterContext";
-import { PaginationStructure } from "../stateless/PaginationStructure";
 import { SingleCharacterStructure } from "../stateless/SingleCharacterStructure";
+import { Pagination } from "../../pagination/Pagination";
+import { NoMatchingResults } from "../../NoMatchingResults/NoMatchingResults";
 
 export const CharacterSection = () => {
     const { filterUrl, filter, setFilter } = useContext(CharacterFilterContext);
@@ -39,16 +40,18 @@ export const CharacterSection = () => {
 
     return (
         <main id="main-character">
-            <ul>
-                {characters.length > 0 ? (
-                    characters.map((character) => (
-                        <SingleCharacterStructure key={character.id} character={character} />
-                    ))
-                ) : (
-                    <p>Loading...</p>
-                )}
-                <PaginationStructure HdlFunctions={hdlFunctions}/>
-            </ul>
+            {
+                characters.length > 0
+                ? 
+                    <ul>
+                        {characters.map((character) => (
+                            <SingleCharacterStructure key={character.id} character={character} />
+                        ))}
+                    </ul>
+                : 
+                    <NoMatchingResults/>
+            }
+            <Pagination HdlFunctions={hdlFunctions} PageFilter={filter} />
         </main>
     );
 };

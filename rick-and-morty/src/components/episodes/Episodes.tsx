@@ -1,14 +1,14 @@
 import { Footer } from "../footer/Footer"
 import { Header } from "../header/Header"
-import { EpisodeFilter } from "./EpisodeFilter"
-import { EpisodeSection } from "./EpisodesSection"
-import './episodes-styles.css'
-import './filter-styles.css'
+import { Filter } from "./stateful/Filter"
+import { EpisodeSection } from "./stateful/EpisodesSection"
+import './styles/episodes-styles.css'
+import './styles/filter-styles.css'
 export const Episodes = () => {
   return (
     <>
         <Header/>
-        <EpisodeFilter/>
+        <Filter/>
         <EpisodeSection/>
         <Footer/>
     </>
