@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { Gender, Status } from "../types/CharacterFilters";
+import { Gender, Status } from "../types/SelectorFilters";
 
 interface Props {
     children: React.ReactNode;

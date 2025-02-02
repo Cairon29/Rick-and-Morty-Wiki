@@ -28,13 +28,13 @@ export const EpisodeFiltterProvider = ({ children }: Props) => {
 
     const [filter, setFilter] = useState<Filters>({
         episode: '',
-        season: '',
-        release_year: '',
+        season: 'all',
+        release_year: 'all',
         page: 1,
         totalPages: 0
     })
 
-    const filterUrl = `https://rickandmortyapi.com/api/episode?page=${filter.page}&name${""}%episode${""}`
+    const filterUrl = `https://rickandmortyapi.com/api/episode?page=${filter.page}&name=${filter.episode}`
 
     return (
         <EpisodeFilterContext.Provider value={{ filter, setFilter, filterUrl }}>
