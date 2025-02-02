@@ -1,0 +1,21 @@
+.no-matching-results {
+    padding: 2em 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 1em;
+    & :first-child {
+        width: 250px;
+    }
+
+    & h2 {
+        color: rgb(255, 170, 170);
+    }
+    & p {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+
+    }
+}
