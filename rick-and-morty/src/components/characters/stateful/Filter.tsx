@@ -3,7 +3,6 @@ import { CharacterFilterContext } from "../../../contexts/CharacterFilterContext
 import { FilterStructure } from "../stateless/FilterStructure";
 import { Gender, Status } from "../../../types/SelectorFilters";
 
-
 export const Filter = () => {
   const { setFilter } = useContext(CharacterFilterContext);
   const [rawFilter, setRawFilter] = useState<{
