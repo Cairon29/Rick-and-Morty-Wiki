@@ -164,12 +164,8 @@
         & p {
             word-wrap: break-word;
             padding: 10px;
-
         }
         & :nth-child(2) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             & img {
                 width: 80%;
             }
