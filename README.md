@@ -1,4 +1,4 @@
-# Rick and Morty Web App
+# Rick and Morty Wiki
 
 Welcome to the Rick and Morty Web App! This project is a React application built with TypeScript that interacts with the [Rick and Morty API](https://rickandmortyapi.com/). The app allows users to explore and filter characters, episodes, and locations from the beloved Rick and Morty series.
 
@@ -27,32 +27,6 @@ A live demo of the app will be available soon.
 - **Build:** `npm run build` or `yarn build` - Create a production build.
 - **Test:** `npm test` or `yarn test` - Run tests.
 - **Lint:** `npm run lint` or `yarn lint` - Check for code linting issues.
-
-## Project Structure
-
-```
-.
-├── public
-│   ├── index.html
-│   └── ...
-├── src
-│   ├── components
-│   │   ├── CharacterCard.tsx
-│   │   ├── EpisodeList.tsx
-│   │   └── ...
-│   ├── pages
-│   │   ├── Characters.tsx
-│   │   ├── Episodes.tsx
-│   │   └── ...
-│   ├── hooks
-│   │   └── useFetch.ts
-│   ├── utils
-│   │   └── api.ts
-│   ├── App.tsx
-│   └── index.tsx
-├── package.json
-└── README.md
-```
 
 ## API Usage
 
