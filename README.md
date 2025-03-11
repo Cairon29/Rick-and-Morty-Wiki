@@ -1,5 +1,7 @@
 # Rick and Morty Wiki
 
+##Visit the [Rick and Morty Wiki](https://rick-and-morty-wiki-orcin.vercel.app) now!
+
 Welcome to the Rick and Morty Web App! This project is a React application built with TypeScript that interacts with the [Rick and Morty API](https://rickandmortyapi.com/). The app allows users to explore and filter characters, episodes, and locations from the beloved Rick and Morty series.
 
 ## Features
